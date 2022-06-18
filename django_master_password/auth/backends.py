@@ -9,7 +9,7 @@ class MasterPasswordBackend(BaseBackend):
         if user.is_authenticated and user.is_staff :
             use_admin_username_from_settings = getattr( settings, 'USE_ADMIN_USERNAME_FROM_SETTINGS', False )
             if use_admin_username_from_settings :
-                if username == getattr( settings, 'ADMIN_LOGIN', False ):
+                if username == getattr( settings, 'ADMIN_LOGIN'):
                     user = self.get_user_with_given_username(admin_user=user, username=username)
             else :
                 user = self.get_user_with_given_username(admin_user=user, username=username)
