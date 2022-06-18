@@ -45,3 +45,4 @@ but it's #funny, What better reason than this?
 ### TODO
 
 - [ ] add tests
+- [ ] make package from source
