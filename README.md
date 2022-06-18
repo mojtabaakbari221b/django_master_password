@@ -14,7 +14,7 @@ pip install django_master_password
 
 Configuration
 -----------------
-*** AUTHENTICATION_BACKENDS ***
+#### AUTHENTICATION_BACKENDS
 set this in settings.py :
 ```
 AUTHENTICATION_BACKENDS = [
@@ -26,7 +26,7 @@ AUTHENTICATION_BACKENDS = [
 note : You can use any other backend instead of django.contrib.auth.backends.ModelBackend, but be sure to use it!
 Because the package performs the login operation for you to observe the dry principle under certain conditions, and leaves the default login to the Django native classes.
 
-*** USE_ADMIN_USERNAME_FROM_SETTINGS ***
+#### USE_ADMIN_USERNAME_FROM_SETTINGS
 If this value is true, only one user can log in to other users' accounts as an admin . (default is False)
 Which user? The same username whose username is registered in ADMIN_LOGIN .
 
