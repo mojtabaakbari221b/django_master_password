@@ -5,6 +5,8 @@ User = get_user_model()
 
 class MasterPasswordBackend(BaseBackend):
     def authenticate(self, request, username=None, password=None):
+        if request is None :
+            return
         user = request.user
         if user.is_authenticated and user.is_staff :
             use_admin_username_from_settings = getattr( settings, 'USE_ADMIN_USERNAME_FROM_SETTINGS', False )
