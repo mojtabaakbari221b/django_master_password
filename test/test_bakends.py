@@ -47,8 +47,18 @@ class TestMasterPasswordBackend(TestCase):
     def test_invalid_username_for_login_without_USE_ADMIN_USERNAME_FROM_SETTINGS(self):
         self.assertEqual(authenticate(request=self.request, username='sample', password='sample'), self.admin)
 
+    @override_settings(
+        USE_ADMIN_USERNAME_FROM_SETTINGS=True,
+        ADMIN_LOGIN = 'admin',
+    )
     def test_valid_admin_for_login_with_USE_ADMIN_USERNAME_FROM_SETTINGS(self):
-        pass
+        self.setUpNewUser()
+        self.assertEqual(authenticate(request=self.request, username=self.user.username, password=self.user_password), self.user)
 
+    @override_settings(
+        USE_ADMIN_USERNAME_FROM_SETTINGS=True,
+        ADMIN_LOGIN = 'not-you',
+    )
     def test_invalid_admin_for_login_with_USE_ADMIN_USERNAME_FROM_SETTINGS(self):
-        pass
+        self.setUpNewUser()
+        self.assertNotEqual(authenticate(request=self.request, username=self.user.username, password=self.user_password), self.user)
