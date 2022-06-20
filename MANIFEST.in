@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include runtests.py
+recursive-include django_master_password *
+recursive-include tests *
+global-exclude *.py[co]
+global-exclude __pycache__
