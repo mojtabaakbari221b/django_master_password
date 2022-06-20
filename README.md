@@ -44,6 +44,6 @@ but it's #funny, What better reason than this?
 
 ### TODO
 
-- [ ] add tests
+- [x] add tests
 - [ ] make package from source
 - [ ] refactoring & make cleaner
