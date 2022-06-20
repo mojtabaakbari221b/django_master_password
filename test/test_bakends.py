@@ -22,7 +22,8 @@ class TestMasterPasswordBackend(TestCase):
     @override_settings(USE_ADMIN_USERNAME_FROM_SETTINGS=False)
     def test_valid_username_for_login_without_USE_ADMIN_USERNAME_FROM_SETTINGS(self):
         pass
-
+    
+    @override_settings(USE_ADMIN_USERNAME_FROM_SETTINGS=False)
     def test_invalid_username_for_login_without_USE_ADMIN_USERNAME_FROM_SETTINGS(self):
         self.assertEqual(authenticate(request=self.request, username='sample', password='sample'), self.user)
 
