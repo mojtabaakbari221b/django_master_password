@@ -46,3 +46,4 @@ but it's #funny, What better reason than this?
 
 - [ ] add tests
 - [ ] make package from source
+- [ ] refactoring & make cleaner
