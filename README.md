@@ -46,4 +46,4 @@ but it's #funny, What better reason than this?
 
 - [x] add tests
 - [ ] make package from source
-- [ ] refactoring & make cleaner
+- [x] refactoring & make cleaner
