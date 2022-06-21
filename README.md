@@ -9,7 +9,7 @@ Installation
 -----------------
 Install via pip:
 ```
-pip install django_master_password
+pip install master-password-django==1.0
 ```
 
 Configuration
@@ -18,7 +18,7 @@ Configuration
 set this in settings.py :
 ```
 AUTHENTICATION_BACKENDS = [
-    'django_master_password.auth.backends.MasterPasswordBackend',
+    'master_password.auth.backends.MasterPasswordBackend',
     'django.contrib.auth.backends.ModelBackend',
     ...
 ]
@@ -45,5 +45,5 @@ but it's #funny, What better reason than this?
 ### TODO
 
 - [x] add tests
-- [ ] make package from source
+- [x] make package from source
 - [x] refactoring & make cleaner
